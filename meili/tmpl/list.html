@@ -1,0 +1,55 @@
+<header>
+		<div class="logo"></div>
+         <div class="kong">
+         <a href="">
+         	 <input type="text" placeholder="套装" ng-module="str1">
+         </a>
+         </div>		 	 
+        <div class="xiao"></div>
+			  
+ </header>
+
+
+<!--图片-->
+<div class="list_1">
+	<div class="memu_1" ng-repeat="item in data|filter:{describe:str1}">
+		<a class="menu_2" href="">
+			<img  ng-src="{{item.img}}" alt="" >
+			<p class="title1">{{item.describe|sub:8}}
+			</p>
+			<div class="pir">
+			<span class="pirce_info">{{item.price|currency:"￥"}}</span>
+			<button class="car" >加入购物车</button>
+			</div>
+		</a>		
+	</div>
+</div>
+<div class="cheng"></div>
+
+ <!--底部---------------->
+	<div class="footer">
+		<a class="nav_h" href="#/">
+			<i class="logoa">
+				<img src="img/jian.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b text_aa">首页</p>
+		</a>
+		<a class="nav_h" href="">
+			<i class="logoa">
+				<img src="img/lei.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">分类</p>
+		</a>
+		<a class="nav_h" href="#/car">
+			<i class="logoa">
+				<img src="img/car.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">购物车</p>
+		</a>
+		<a class="nav_h" href="#">
+			<i class="logoa">
+				<img src="img/logod.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">我</p>
+		</a>
+	</div>

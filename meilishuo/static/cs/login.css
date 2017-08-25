@@ -1,0 +1,490 @@
+/*******公共样式************/
+*{
+	padding:0;
+	margin:0;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#666;
+	font-size:12px;
+	
+}
+body{
+	position:relative;
+	color:#666;
+	background:#f2f0f0;
+	font-size:12px;
+	font-family:Arial,"Microsoft YaHei";
+}
+
+#page{
+	width:100%;
+	height:600px
+	
+	
+}
+#page #pagefirst{
+	width:1200px;
+	height:600px;
+	margin:0 auto;
+	
+	
+}
+#page #pagefirst #page-content{
+	width:980px;
+	height:600px;
+	margin:0 auto;
+	background:#fff;
+}
+
+
+#page-content  #imgto1{
+	width:980px;
+	height:80px;
+	background:#f2f0f0;
+	
+}
+#page-content  #imgto1  .imgto2{
+	width:225px;
+	height:80px;
+	display:inline-block;
+}
+
+.imgto2 img{
+	display:block;
+	width:100%;
+}
+
+#page-content #content{
+	width:980px;
+	height:458px;
+	padding:40px;
+	margin-bottom:80px;
+	background:#fff;
+
+}
+
+#content #left-box{
+	height:378px;
+	width:358px;
+	float:left;
+	margin-left:10px;
+
+}
+#left-box img{
+	display:block;
+}
+
+#content #right-box{
+	width:322px;
+	height:358px;
+	padding-left:40px;
+	margin-bottom:30px;
+	float:right;
+	border:1px solid #dcdcdc
+}
+#right-box .title{
+	font-size:14px;
+	color:#666;
+	margin-left:-40px;
+	font-weight:700;
+	line-height:56px;
+	text-indent:40px;
+	border-bottom:1px solid #dcdcdc;
+}
+
+
+.title .register{
+	float:right;
+	font-size:12px;
+	margin-right:40px;
+	font-weight:400;
+	text-decoration:underline;
+
+}
+
+
+#right-box .form{
+	padding-right:40px;
+}
+
+#right-box .form .error-pist{
+	background:url(../imgs/jianh.png)no-repeat #fffff8;
+	border:1px solid #ffd797;
+	color:#ff5783;
+	width:240px;
+	padding-left:40px;
+	margin-bottom:0px;
+	margin-top:30px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	display:none;
+	
+
+}
+#right-box .form .item{
+	margin-top:15px;
+	overflow:hidden;
+}
+
+.item .ui-input{
+	border:1px solid #cfcfcf;
+	padding:0 6px 0 0;
+	float:left;
+	text-indent:6px;
+	background:0 0;
+}
+#content .phone,#content  .pwd{
+	
+	width:100%;	
+	height:30px;
+	line-height:30px;
+	box-sizing:border-box;
+	
+}
+
+#right-box .form .img-code{
+	margin-top:15px;
+	overflow:hidden;
+	display:none;
+}
+.item  .submit{
+	color:#fff;
+	background:#f36;
+	text-align:center;
+	width:100%;
+	border:0;
+	line-height:36px;
+	font-size:14px;
+	cursor:pointer;
+}
+.item  .check{
+		
+		height:14px;
+		float:left;
+}
+#right-box .form .forget{
+	color:#f36;
+	text-decoration:underline;
+	float:right;
+
+
+}
+
+
+#right-box  .fast-login{
+	width:280px;
+	height:90px;
+	border-top:1px dotted #ccc;
+	margin-top:20px;
+	margin-right:40px;
+
+}
+
+.fast-login h3{
+	padding-top:20px;
+	padding-bottom:15px;
+	font-size:14px;
+	font-weight:700;
+	color:#666;
+
+}
+.fast-login .fast-way{
+	width:280px;
+	height:35px;
+
+}
+
+.fast-way .qqlink{
+	width:86px;
+	height:35px;
+	float:left;
+	background:url(../imgs/iwei.png) no-repeat -6px -120px;
+
+}
+.fast-way .bolink{
+    width:86px;
+	height:35px;
+	float:left;
+	margin-left:6px;
+	margin-right:6px;
+	background:url(../imgs/iwei.png) no-repeat -6px -160px;
+
+}
+.fast-way .weilink{
+    width:86px;
+	height:35px;
+	float:left;
+	background:url(../imgs/iwei.png) no-repeat -6px -200px;
+
+}
+
+
+
+
+
+
+
+
+
+/* 尾部部分****************/
+#foot{
+	width:100%;
+	height:302px;
+	background-color:#f5f5f5;
+	border-top:1px solid #ddd;
+}
+#footer-containner{
+	width:1200px;
+	height:302px;
+	 font-size:12px;
+	 color:#666;
+	/*background-color:#f5f5f5;*/
+	margin:0 auto;
+	
+	padding-top:30px;
+}
+#footer-inner{
+	width:1200px;
+	height:206px;
+	/*background:pink;*/
+	
+	
+}
+
+.flist{
+	float:left;
+	margin-left:20px;
+	line-height:26px;
+	margin-right:90px;
+	margin-bottom:20px;
+
+}
+.flist .yang{
+	font-size:16px;
+	line-height:26px;
+	
+}
+ .footer-link{
+ 	display:block;
+	padding:6px 2px;
+}
+#footer-containner .aboutus .flist{
+	margin-right:0px;
+}
+#footer-containner a:hover{
+	color:#f36;
+}
+#footer-containner .service .flist{
+	text-align:center;
+	margin-left:228px;
+	margin-right:50px;
+
+}
+#footer-containner .flist .qrcode{
+	display:inline-block;
+	margin-top:13px;
+}
+#footer-containner .last .flist{
+	margin-right:0px;
+	text-align:center;
+
+}
+
+#footer-containner .xin,#footer-containner .qq,
+#footer-containner .teng{
+	height:18px;
+	width:18px;
+	float:left;
+	margin-top:5px;
+	margin-right:5px;
+	background:url(../imgs/xinlang.png)no-repeat;
+}
+#footer-containner .qq{
+	background-position:-28px 0px;
+}
+#footer-containner .teng{
+	background-position:-56px 0px;
+}
+
+
+
+
+#footer-record{
+	text-align:center;
+	padding:12px 192px;
+	line-height:22px;
+
+	border-top:1px solid #e6e6e6;
+
+}
+
+
+
+/* 侧面导航**********************/
+#sidebar{
+	width:38px;
+	height:100%;
+	background-color:#F6F6F6;
+	font-size:12px;
+	position:fixed;
+	right:0px;
+	top:0px;
+	border-left:1px solid #ddd;
+	z-index:999;
+}
+#side-option{
+	position:absolute;
+	top:62px;
+	border-top:1px solid #ddd;
+
+}
+
+/****下载块*************/
+#sidebar  .side-download{
+	display:block;
+	position:relative;
+	padding-top:41px;
+	width:10px;
+	height:70px;
+	padding-right:14px;
+	padding-left:14px;
+	cursor:pointer;
+	line-height:1.2;
+	color:#666;
+	font-size:12px;
+	text-decoration:none;
+	background:url(../imgs/idid2.png)13px 10px no-repeat;
+
+}
+
+
+#sidebar .xiakong{
+	width:40px;
+	height:20px;
+	margin-top:12px;
+	margin-left:-18px;
+	display:inline-block;
+	-webkit-transform:rotate(90deg);
+
+}
+#sidebar .side-qcode{
+	width:140px;
+	height:140px;
+	padding:13px;
+	border:1px solid #ddd;
+	top:0px;
+	right:38px;
+	position:absolute;
+	background-color:#fff;
+	display:none;
+
+}
+#sidebar .side-qcode img{
+	left:0px;
+	right:0px;
+	bottom:0px;
+	top:0px;
+	margin:auto;
+	display:block;
+	position:absolute;
+
+}
+
+
+/*********购物车、消息、优惠券块****************/
+#sidebar .side-cart,#sidebar .side-xiao,
+#sidebar .side-quan{
+		position:relative;
+}
+#sidebar .side-btn{
+	border-bottom:1px solid #ddd;
+	line-height:1.2;
+
+}
+
+#sidebar .side-links{
+	display:block;
+	width:10px;
+	padding-top:36px;
+	padding-right:14px;
+	padding-left:14px;
+	cursor:pointer;
+	line-height:1.2;
+	color:#666;
+	text-decoration:none;
+
+
+}
+#sidebar .side-num{
+	background-color:#f33866;
+	color:#fff;
+	padding:0 4px;
+	border-radius:10px;
+	display:block;
+	position:absolute;
+	top:4px;
+	right:2px;
+	z-index:1000;
+
+
+}
+
+
+
+/*****购物块************/
+
+#sidebar .side-cart .side-links{
+height:61px;
+background:url(../imgs/idid3.png)10px 9px no-repeat;
+	;
+}
+
+
+
+/*****消息块************/
+#sidebar .side-xiao .side-links{
+	height:52px;
+	background:url(../imgs/idid4.png)11px 13px no-repeat;
+	;
+}
+/*****优惠块************/
+#sidebar  .side-quan  .side-links{
+	height:56px;
+background:url(../imgs/idid5.png)11px 13px no-repeat;
+	;
+}
+
+/*****收藏块************/
+#sidebar  .side-xing  .side-links{
+	height:46px;
+	padding-top:41px;
+	background:url(../imgs/idid6.png) 11px 13px no-repeat;
+	;
+}
+/*****足迹块************/
+#sidebar  .side-zu  .side-links{
+	height:49px;
+	padding-top:44px;
+
+background:url(../imgs/idid7.png)11px 13px no-repeat;
+	;
+}
+
+
+/*****返回块************/
+#side-gotop{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	width:38px;
+	height:40px;
+	text-align:center;
+	z-index:1000;
+	background:url(../imgs/hongjian.png)12px 16px no-repeat;
+
+}

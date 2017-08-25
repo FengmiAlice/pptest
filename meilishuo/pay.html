@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车页面</title>
+	<link rel="icon" href="./static/imgs/zui.png">
+	<link rel="stylesheet" href="./static/cs/normalize.css">
+	<link rel="stylesheet" href="./static/cs/pay.css">
+    <script src="./static/js/jquery-1.11.2.min.js"></script>
+</head>
+<body style="height:645px">
+<a href="./index.html">返回首页</a>
+	<!-- 定义头部-------->
+	<header>
+	  <div id="menu">	
+		 <a href="#" class="home">
+		    <span class="link1"></span>美丽说首页
+		 </a> 
+		 <div class="head_top">
+		 	<ul >
+				<li class="sl"><a href="#">登录</a></li>
+				<li class="sl"><a href="#">注册</a></li>
+			   <li class=" morder">
+			   <a  href="#">
+			   <span class="order1"></span>我的订单</a>
+			   </li>
+				<li class=" goucar">
+				<a href="#">
+				<span class="shop-load"></span> 购物车 
+				</a>
+				</li>
+				
+				<li class="help"><a href="#">帮助中心
+				<span class="help1"> </span>
+				</a>
+				</li>
+				<li class="sli"><a href="#">商家后台</a></li>
+				
+				</ul>	
+
+
+		 </div>
+			
+		    	
+				
+		</div>
+	</header>
+
+
+
+	<!--logo-->
+    <div class="logo_1">
+        <div class="logo_2">
+            <div class="left_logo">
+            	<img src="./static/imgs/mei2.png" alt="">
+            </div>
+            <div class="right_cir">
+
+                <div class="ri1"></div>
+
+                <span class="ri2">购物车</span>
+                <span class="ri3">确认订单</span>
+                <span class="ri3">支付</span>
+                <span class="ri3">完成</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--全部商品-------------->
+    <div class="list">
+        <div class="list_num">
+            <div class="list_num1">
+                <ul>
+                    <li class="first1">
+                        <a href="#">全部商品(1)</a>
+                        <span class="shu">|</span>
+                    </li>
+                    <li>
+                        <a href="#">优惠(0)</a>
+                        <span class="shu">|</span>
+                    </li>
+                    <li><a href="#">库存紧张(0)</a><span class="shu">|</span></li>
+                </ul>
+            </div>
+
+
+            <div class="list_num2">
+                <div class="listA">
+                    <div class="nei">    
+                    <script src="./static/js/quanfan.js"></script>
+                        <div class="listA_1">
+                        <button class="quan">全选</button>
+                        <button class="bu">全不选</button>
+                        <button class="fan">反选</button>
+                            <!-- <input class="inp" type="checkbox">
+                            全选 -->
+                            
+                        </div>
+                        <button class="listA_2">
+                         添加商品
+                        </button>
+                        <div class="listA_3">商品信息</div>
+                        <div class="listA_4">单价(元)</div>
+                        <div class="listA_5">数量</div>
+                        <div class="listA_6">小计(元)</div>
+                        <div class="listA_7">操作</div>
+
+                    </div>
+                </div>
+                <div class="listB">
+                    <div class="listB_1">
+                        <ul>
+                            <li>店铺:<input class="inp1" type="checkbox"></li>
+                            <li>美丽优选</li>
+                            <li>联系客服</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!--商品 ------------>
+                 <script src="./static/js/tianjia.js"></script>
+                <div class="listC">
+                <!--  第一件商品 ---------->
+                   <ul class="listC_0">
+                        <li class="listC_1">
+                     <input class="inp2" type="checkbox">
+                        </li>
+                        <li class="listC_2">
+                            <a class="pzi1">
+                            	<img src="./static/imgs/you1.jpg" alt="">
+                            </a>
+                            <a class="pzi"> 夏装新款女装t恤女短袖休闲
+                            </a>
+                        </li>
+                        <li class="listC_3">
+                            <p class="size">颜色:黄色</p>
+                            <p class="size">尺码:s</p>
+                        </li>
+                        <li class="listC_4">48
+                        </li>
+                        <li class="listC_5">
+                            <span class="jian">-</span>
+                            <input type="text" class="car_input" value="1">
+                            <span class="jia">+</span>
+
+                        </li>
+                        <li class="listC_6">48
+                        </li>
+                        <li class="listC_7">
+                    <a href="javascript:;" class="delete">删除</a>
+                        </li>
+                    </ul>
+               
+                
+                <!--  第二件商品 ---------->
+                    <ul class="listC_0">
+                        <li class="listC_1">
+                        <input class="inp2" type="checkbox">
+                        </li>
+                        <li class="listC_2">
+                            <a class="pzi1">
+                                <img src="./static/imgs/you5.jpg" alt="">
+                            </a>
+                            <a class="pzi"> 夏装新款女装t恤女短袖休闲
+                            </a>
+                        </li>
+                        <li class="listC_3">
+                            <p class="size">颜色:黄色</p>
+                            <p class="size">尺码:s</p>
+                        </li>
+                        <li class="listC_4">48
+                        </li>
+                        <li class="listC_5">
+                            <span class="jian">-</span>
+                            <input type="text" class="car_input" value="1">
+                            <span class="jia">+</span>
+
+                        </li>
+                        <li class="listC_6">48
+                        </li>
+                        <li class="listC_7">
+                         <a href="javascript:;" class="delete">删除</a>
+                        </li>
+                    </ul>
+              
+                 <!--  第三件商品 ---------->   
+                    <ul class="listC_0">
+                        <li class="listC_1">
+                        <input class="inp2" type="checkbox">
+                        </li>
+                        <li class="listC_2">
+                            <a class="pzi1">
+                                <img src="./static/imgs/you6.jpg" alt="">
+                            </a>
+                            <a class="pzi"> 夏装新款女装t恤女短袖休闲
+                            </a>
+                        </li>
+                        <li class="listC_3">
+                            <p class="size">颜色:黄色</p>
+                            <p class="size">尺码:s</p>
+                        </li>
+                        <li class="listC_4">48
+                        </li>
+                        <li class="listC_5">
+                            <span class="jian">-</span>
+                            <input type="text" class="car_input" value="1">
+                            <span class="jia">+</span>
+
+                        </li>
+                        <li class="listC_6">48
+                        </li>
+                        <li class="listC_7">
+                    <a href="javascript:;" class="delete">删除</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+            <div class="list_num3">
+
+                <div class="list_num4">
+                    <input class="inp" type="checkbox">
+                    <!-- <span class="quan">全选</span>
+                    <a class="car_aline" href="#">删除</a> -->
+                    <a class="car_aline" href="#">清空失效商品</a>
+                </div>
+                
+                <!-- <div class="goodsNum2"></div> -->
+                <div class="list_num5">
+                    <a href="#" class="suan1">共有
+                    <span class="goodsNum">3</span>
+                    款商品
+                    </a>
+                    <a href="#" class="suan2">总计：<span class="jisuan"> 0.00</span>
+                    </a>
+                </div>
+
+                <div class="goodsNum1">
+                <a class="qufu" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- 吸底结算页面 ---------------->
+<script src="./static/js/xidi.js"></script>
+<div class="bottom1">
+    <div class="list">
+        <div class="listnum">
+            <div class="list_num4">
+                    <input class="inp" type="checkbox">
+                    <!-- <span class="quan">全选</span>
+                    <a class="car_aline" href="#">删除</a> -->
+                    <a class="car_aline" href="#">清空失效商品</a>
+                </div>
+
+                
+                
+                <div class="list_num5">
+                    <a href="#" class="suan1">共有
+                    <span class="goodsNum">0</span>
+                    款商品
+                    </a>
+                    <a href="#" class="suan2">总计：<span class="jisuan">¥ 0.00</span>
+                    </a>
+                </div>
+
+                <div class="goodsNum1">
+                <a class="qufu" href="#"></a>
+                </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- 尾部部分的内容-------->
+   
+
+  <div class="footer">
+        <p class="footer1">
+            <a href="#">美丽说</a>
+
+            © 2016 Meilishuo.com,All Rights Reserved.
+        </p>
+
+
+        <div class="icons">
+            <a class="vs" href="#"></a>
+            <a class="mc" href="#"></a>
+            <a class="up" href="#"></a>
+            <a class="pa" href="#"></a>
+            <a class="kx" href="#"></a>
+            <a class="pc" href="#"></a>
+        </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

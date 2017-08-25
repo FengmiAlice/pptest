@@ -1,0 +1,156 @@
+
+<div id="wrapper">
+<!-- 搜索部分 -->
+	<header>
+		<div class="logo"></div>
+         <div class="kong">
+         <a href="#/list">
+         	 <input type="text" placeholder="套装" >
+         </a>
+         </div>		 	 
+        <div class="xiao"></div>
+			  
+	 </header>
+<!-- 轮播部分 -->
+<div direc></div>
+<div class="swiper-container" id="lunbo">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide "    > 
+          <img src="img/lun1.webp"  alt=""/>
+        </div>
+        <div class="swiper-slide" >
+        <img src="img/lun2.webp"  alt=""/>
+        </div> 
+        <div class="swiper-slide" >
+        <img src="img/lun3.webp"  alt=""/>
+        </div> 
+        <div class="swiper-slide" >
+        <img src="img/lun4.webp"  alt=""/>
+        </div>  
+        
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!--导航图片-->
+<div class="nav1-pic">
+	<ul>
+	   <li>
+			<img src="img/tao1.webp" alt="">
+			<p>热销单品</p>
+		</li>
+		<li>
+			<img src="img/tao2.webp" alt="">
+			<p>大咖同款</p>
+		</li>
+		
+		<li>
+			<img src="img/tao.gif" alt="" >
+			<p>省心套装</p>
+		</li>
+		<li>
+			<img src="img/tao3.webp" alt="" >
+			<p>今日上新</p>
+		</li>
+		
+	</ul>
+</div>
+
+<h1 class="xian">限时特惠区</h1>
+<!-- 无缝轮播 -->
+<div direc></div>
+<div class="swiper-container" id="slide1">
+<!-- 公共组件区 -->
+    <div class="swiper-wrapper" >
+    <!-- 一个slide 就是一屏-->
+        <div class="swiper-slide">
+        	<img  src="img/up1.webp"  alt="">
+        </div>
+        <div class="swiper-slide">
+        	<img src="img/up2.webp"  alt="">
+        </div>
+        <div class="swiper-slide">
+        	<img src="img/up3.webp"  alt="">
+        </div>
+        <div class="swiper-slide">
+        	<img src="img/up4.webp" alt="">
+        </div>
+        <div class="swiper-slide">
+        	<img src="img/up5.webp" alt="">
+        </div>
+         <div class="swiper-slide">
+        	<img src="img/up6.webp" alt="">
+        </div>
+         <div class="swiper-slide">
+        	<img src="img/up7.webp" alt="">
+        </div>
+         <div class="swiper-slide">
+        	<img src="img/up8.webp"  alt="">
+        </div>
+    </div>
+   <!-- 公共组件区 -->
+    <!-- <div class="swiper-pagination"></div> -->
+</div>
+
+
+<!-- 列表部分 -->
+<div class="lists">
+	<a href="#"><span>流行</span></a>
+	<a href="#"><span>新款</span></a>
+	<a href="#"><span>精选</span></a>
+</div>
+
+<!--图片-->
+<div class="list_1">
+	<div class="memu_1" ng-repeat="item in data">
+		<a class="menu_2" href="">
+			<img  ng-src="{{item.img}}" alt="" >
+			<p class="title1">{{item.describe|sub:8}}
+			</p>
+			<div class="pir">
+			<span class="pirce_info">{{item.price|currency:"￥"}}</span>
+			<button class="car" ng-click="set(item.goodsId,true)" onclick="fei()">加入购物车</button>
+			</div>
+		</a>		
+	</div>
+</div>
+	<div class="cheng"></div>
+
+
+
+    <div id="gouwu">
+		<a class="gouwu1" href="#/car"  ng-model="item.num"><span class="num_1">{{cart.length}}</span></a>
+		
+
+	</div>
+	<!--底部---------------->
+	<div class="footer">
+		<a class="nav_h" href="">
+			<i class="logoa">
+				<img src="img/jian.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b text_aa">首页</p>
+		</a>
+		<a class="nav_h" href="#/list">
+			<i class="logoa">
+				<img src="img/lei.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">分类</p>
+		</a>
+		<a class="nav_h" href="#/car">
+			<i class="logoa">
+				<img src="img/car.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">购物车</p>
+		</a>
+		<a class="nav_h" href="#">
+			<i class="logoa">
+				<img src="img/logod.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">我</p>
+		</a>
+	</div>
+
+  
+</div>

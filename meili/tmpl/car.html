@@ -1,0 +1,114 @@
+<div id="wrapper">
+	<!--头部-->
+		<div class="header">
+			<div class="header_1">
+				<div class="pic_1">
+				<a href="#/"><img src="img/btn.png" alt=""></a>
+				</div>
+				<button class="btn-right" ng-click="del()">删除
+				</button>
+				<div class="til"><a href="#">购物车</a></div>
+			</div>
+		</div>
+
+<!--title-->
+		<div class="title_1">
+			<div class="title_2">
+				<div class="tu1">
+					<img src="img/tu1.png" alt="">
+				</div>
+				<div class="ti2">
+				<a href="#">店铺：美丽优选
+				</a>
+				</div>
+				<div class="price_1">
+					合计:<span class="price_2">{{sumPrice()|currency:"￥"}}</span>
+				</div>
+			</div>
+		</div>
+
+
+<!--list加入购物车列表 开始-->
+
+	 <div class="listt">
+		<div class="lists_1" ng-repeat="item in cart">
+			<div class="tu2">
+				<img src="img/tu1.png">
+			</div>	
+			<div class="tu3">
+			<img ng-src="{{item.img}}" ></div>
+		<div class="lists_2">
+			<p class="text_a">{{item.describe}}</p>
+			<p class="text_c">颜色：白色 尺码：L</p>
+
+			<div class="numBox">
+			 <button class="minus disabled" ng-click="set(item.goodsId,false)">-</button> 
+			 <input type="text" class="nums"  value="1" ng-model="item.num"> 
+			 <button class="add plus" ng-click="set(item.goodsId,true)">+</button>
+			 <div class="nums_mask"></div> </div>
+		</div>
+
+		<div class="right"> 
+		<p class="goods_price" data-price="36.30">{{item.num*item.price|currency:"￥"}}
+		</p> 
+		<p class="origin_price">
+		<del>{{item.num*item.price|currency:"￥"}}</del> 
+		</p> 
+		<button class="delete_btn js-action" data-action="removeSingle"  ng-click="item.num=0">删除</button> 
+		</div>
+
+		</div>
+	</div>
+
+	<!--底部全选，总计，结算-->
+	<div class="pirce_cc">
+			<div class="pirce_c1">
+				<div class="tu1">
+					<img src="img/tu1.png" alt="">
+
+				</div>
+				<span class="quxuan">全选</span>
+				<div class="heji">合计:
+					<span>{{sumPrice()|currency:"￥"}}
+					</span>
+				</div>
+				<button class="btn_A" ng-model="item.num">去结算 ({{cart.length}})</button>
+
+
+				
+			</div>
+     </div>
+
+
+
+
+<!--底部---------------->
+	<div class="footer">
+		<a class="nav_h" href="#/">
+			<i class="logoa">
+				<img src="img/jian.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b text_aa">首页</p>
+		</a>
+		<a class="nav_h" href="#/list">
+			<i class="logoa">
+				<img src="img/lei.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">分类</p>
+		</a>
+		<a class="nav_h" href="">
+			<i class="logoa">
+				<img src="img/car.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">购物车</p>
+		</a>
+		<a class="nav_h" href="#">
+			<i class="logoa">
+				<img src="img/logod.png" alt="" style="width:19px; height:19px;">
+			</i>
+			<p class="text_b">我</p>
+		</a>
+	</div>
+
+
+</div>

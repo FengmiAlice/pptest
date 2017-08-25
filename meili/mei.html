@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>index</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="sass/sass.css">
+	<link rel="stylesheet" href="sass/car.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+
+
+	<script src="js/resp.js"></script>
+	<script src="js/faskclick.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/fly.js"></script>
+	<script src="js/WebP.js"></script>
+</head>
+<!-- 外面的大容器 -->
+<body ng-controller="cont">
+<div ng-view></div>
+	<script>
+	var app=angular.module("myapp",['ngRoute'],RouteConfig);
+
+	    app.filter("sub",function(){
+			return function(val,num){
+				if(val.length>num){
+					var dis=val.substring(0,num)+"...";
+				}else{
+					var dis=val;
+				}
+
+			return dis;
+			}
+		})
+	function RouteConfig($routeProvider){
+	  $routeProvider
+	    .when('/',{
+	      templateUrl:"tmpl/shou.html"
+	    })
+	     .when('/car',{
+	      templateUrl:"tmpl/car.html"
+	    })
+	     .when('/list',{
+	     	templateUrl:"tmpl/list.html"
+	     })
+	}
+	app.directive('direc',function(){
+    // 1.为什么返回?
+    return {
+        restrict:'AE', //四种都可以渲染
+        replace : true, 
+        compile:function(){
+        console.log("OK");
+        	// 每渲染一次执行一次
+        	
+        var swiper = new Swiper('#lunbo', {
+        loop:true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 2000,
+    });
+      var swiper = new Swiper('#slide1', {
+        // pagination: '.swiper-pagination',
+        paginationClickable: true,
+        freeMode:true,//启动惯性
+  		slidesPerView : 3,/*分栏控制一屏显示几个*/
+        spaceBetween: 10,
+    });
+   }
+};
+
+});
+
+	app.controller("cont",function($scope){
+		$scope.data=[
+			{"goodsId":"101010","img":"./img/zu1.webp","describe":"  2017夏季新款韩版修身连衣裙轻奢时尚网纱绣花无袖短裙  ","price":"81.25"},
+            {"goodsId":"10fddsdf","img":"./img/zu2.webp","describe":" 孕妇装新款韩版宽松大码中长款显瘦两件套孕妇连衣裙长 ","price":"78.75"},
+            {"goodsId":"123322","img":"./img/zu3.webp","describe":" 2017春夏季新款女装韩版气质收腰显瘦荷叶边鱼尾连衣裙短裙 ","price":"75"},
+            {"goodsId":"2332846","img":"./img/zu4.webp","describe":" 2017韩版时尚烫金字母贴布修身纯棉t恤学生百搭打底衫上衣女 ","price":"59.5"},
+            {"goodsId":"3456","img":"./img/zu5.webp","describe":" 2017夏装新款百搭宽松短袖中长款T恤裙子连衣裙 ","price":"85"},
+            {"goodsId":"992348","img":"./img/zu6.webp","describe":"2017夏季新款原宿短袖t恤女bf韩版宽松学生百搭上衣","price":"70.9"},
+            {"goodsId":"123131","img":"./img/zu7.webp","describe":" 甜美文艺小清新白色长裙2017新款夏季蕾丝森女风连衣裙 ","price":"80"},
+           {"goodsId":"3424221299","img":"./img/zu8.webp","describe":" 2017新款女装韩版a字衬衫裙子夏季显瘦中长款条纹连衣裙 ","price":"103.5"},
+
+
+		];
+
+
+
+		angular.forEach($scope.data,function(item,index){
+            	// console.log(item);
+            	item.num=0;
+            	item.price=-(-(item.price));
+            })
+
+		     $scope.set=function(goodsId,bool){
+            	console.log(goodsId);
+            	angular.forEach($scope.data,function(item,index){
+            		if(goodsId==item.goodsId){
+            			if(bool){
+							if(item.num==0){
+								item.num=1;
+								 $scope.cart.push(item);
+							}else{
+								item.num++;
+							}
+            			}else{
+            					item.num--;
+            					item.num=item.num<=0?0:item.num;
+            					
+            			}
+            		}
+
+            	})
+          }
+            $scope.cart=[];
+
+
+
+             $scope.sumPrice=function(){
+                var allPrice=0;  
+                angular.forEach($scope.cart,function(item,index){
+                   // 计算总价 
+                    allPrice+=item.num*item.price;
+                    if(item.num<=0){$scope.cart.splice(index,1)};
+                })
+                return allPrice;
+            }
+
+         
+            $scope.del=function(){
+         
+              var arr = [];
+              $scope.cart=arr;
+            //    $scope.number = 0; 
+            //     for(var i=0 in $scope.data){
+            //         if($scope.data[i].bool){
+            //              $scope.number++;
+            //         }
+            //     }
+            //  $scope.inner ="你确定要删除选中的"+$scope.number+"条数据吗？";
+              
+            
+            }                               
+     
+		});
+
+	//购物车抛物线
+	function fei(){
+		var flyer = $('<img class="u-flyer" src="./img/logo.png">');
+            //鼠标在页面点击开始位置计算.
+			var top = $(window).scrollTop();			
+			var dh = event.pageY;
+			var newh = dh - top;
+
+
+
+
+			// 购物车按钮  end在那图片飘到哪
+			var oDiv = $('#gouwu').offset();
+		    // console.log(oDiv);
+
+
+			var newdh = oDiv.top - top;
+
+
+			// 我可以设置初始,结束,图片宽度
+			flyer.fly({
+				start: {
+					left: event.pageX,
+					top: newh,
+					// width:1000,
+					// height:1000,
+					// 初始的图片样式我可以设置在class类里面
+				},
+				end: {
+					left: oDiv.left,
+					top: newdh,
+					width: 0,
+					height: 0
+				},
+				onEnd:function(){
+					console.log("OK");
+					this.destory();
+				}
+			});
+		};
+		
+
+	
+	</script>
+</body>
+</html>
